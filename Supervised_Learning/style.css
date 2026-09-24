@@ -1,0 +1,134 @@
+/* Global premium typography & styling for Streamlit */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+html, body, [class*="css"]  {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Keep dashboard icons proportional and compact */
+div[data-testid="stImage"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+div[data-testid="stImage"] img {
+    max-width: 220px !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* Glassmorphism sidebar */
+[data-testid="stSidebar"] {
+    background: rgba(30, 30, 30, 0.6) !important;
+    backdrop-filter: blur(15px);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+}
+
+.sidebar-title {
+    color: #4CAF50;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(135deg, #43a047 0%, #1de9b6 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Metric cards */
+[data-testid="stMetricValue"] {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1de9b6;
+}
+
+[data-testid="stMetricLabel"] {
+    font-size: 1rem;
+    color: #a0a0a0;
+}
+
+/* Titles */
+h1 {
+    background: -webkit-linear-gradient(45deg, #4CAF50, #00BCD4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+h2, h3 {
+    color: #E0E0E0;
+    font-weight: 600;
+}
+
+/* Dataframe & Tables styling */
+.stDataFrame {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Radio buttons & Selectboxes */
+.stRadio > div {
+    padding: 10px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 8px;
+}
+
+.stSelectbox > div > div {
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Dynamic Gradient Background */
+.stApp {
+    background: linear-gradient(-45deg, #0d1b2a, #1b263b, #415a77, #132a13, #001219);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism App Cards (Frames) */
+.app-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(76, 175, 80, 0.5);
+}
+
